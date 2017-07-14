@@ -1,0 +1,26 @@
+#!/bin/sh
+
+
+# Array of stows to be installed -- which originate from the home folder, some stows require special instructions.
+homeStows=(
+    "fonts"
+    "neovim"
+    "flake8"
+)
+
+# Ask for user password only once.
+sudo -v
+
+# Remove old stowed files.
+rm -rf ~/.fonts
+rm -rf ~/.config/nvim
+rm -rf ~/.config/flake8
+
+# Install stowed files from array.
+echo "Installing dotfiles."
+
+for ((i=0; i<=$((${#homeStows[@]} - 1)); i++)); do
+    stow -d ~/dotfiles -t ~ ${homeStows[i]}
+    echo "Dotfiles for ${homeStows[i]} installed."
+done
+

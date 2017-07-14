@@ -1,0 +1,7 @@
+let g:netrw_dirhistmax  =10
+let g:netrw_dirhist_cnt =5
+let g:netrw_dirhist_1='/home/Workspace/mtl/mtl-player/modules/core'
+let g:netrw_dirhist_2='/home/Workspace/mtl/mtl-player/modules/core/server'
+let g:netrw_dirhist_3='/home/Workspace/mtl/mtl-player/modules/core/server/controllers'
+let g:netrw_dirhist_4='/home/Workspace/repl-it/repl-it-web/client/replbox/javascript'
+let g:netrw_dirhist_5='/etc/systemd/network'
